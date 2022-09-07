@@ -5,12 +5,12 @@ const roundedSquareWave = (t, delta, a, f) => {
     return ((2 * a) / Math.PI) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
   }
 
-const Dots = () => {
+const Dots = ({pastHeroSection}) => {
     const ref = useRef()
     const { vec, transform, positions, distances } = useMemo(() => {
       const vec = new THREE.Vector3()
       const transform = new THREE.Matrix4()
-      const positions = [...Array(10000)].map((_, i) => {
+      const positions = [...Array(500000)].map((_, i) => {
         const position = new THREE.Vector3()
         position.x = (i % 100) - 50
         position.y = Math.floor(i / 100) - 50
@@ -29,9 +29,10 @@ const Dots = () => {
     useFrame(({ clock }) => {
      
   
-      for (let i = 0; i < 10000; ++i) {
+      for (let i = 0; i < 500000; ++i) {
         const dist = distances[i]
-        const t = clock.elapsedTime/2.5 - dist / 20
+        const timeDivide = pastHeroSection ? 5 : 1.2
+        const t = clock.elapsedTime/timeDivide - dist / 20
         const wave = roundedSquareWave(t, 0.15 + (0.2 * dist) / 72, 0.4, 1 / 3.8)
         vec.copy(positions[i]).multiplyScalar(wave + 1.3)
         transform.setPosition(vec)
@@ -40,9 +41,9 @@ const Dots = () => {
       ref.current.instanceMatrix.needsUpdate = true
     })
     return (
-      <instancedMesh ref={ref} args={[null, null, 10000]}>
-        <circleGeometry args={[0.15]} />
-        <meshBasicMaterial />
+      <instancedMesh ref={ref} args={[null, null, 500000]}>
+        <circleGeometry args={[0.08]}  />
+        <meshBasicMaterial color={pastHeroSection ? "#2e3133" : 'white'} />
       </instancedMesh>
     )
   }

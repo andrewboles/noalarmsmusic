@@ -3,12 +3,11 @@
     z-index: 2;
     position: -webkit-sticky;
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     top: 0px;
     height: 60px;
-    background-color: #89908c;
+    background-color: #747273;
     box-shadow: 0 8px 6px -6px black;
   }
   .nav ul {
@@ -20,11 +19,10 @@
     list-style: none;
   }
   .nav a {
-    color: #f2ebe6;
+    color: #fffefd;
     font-size: clamp(1rem, 2vw, 1.5rem);
-    font-family: "Manrope", sans-serif;
-    font-weight: 500;
-    margin: 0 1rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
     transition-duration: 0.4s;
   }
   .nav a:hover {

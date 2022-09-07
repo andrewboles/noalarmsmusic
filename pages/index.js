@@ -7,32 +7,46 @@ import { useRef } from "react";
 import ContactSection from "../components/ContactSection";
 import AboutSection from "../components/AboutSection";
 import ProjectsSection from "../components/ProjectsSection";
+import { useScroll  } from "framer-motion";
+import { useEffect,useState } from "react";
 
 export default function Home() {
   const aboutRef = useRef(null);
+  const { scrollY } = useScroll()
+
+  
+
+  const [pastHeroSection, setPastHeroSection] = useState(false)
+
+useEffect(() => {
+  return scrollY.onChange((latest) => {
+    if(latest < window.innerHeight*0.7 && pastHeroSection){
+      setPastHeroSection(false)
+    } else if(latest > window.innerHeight*0.7 && ! pastHeroSection){
+      setPastHeroSection(true)
+    }
+  })
+}, [scrollY, pastHeroSection])
   return (
     <>
-      <div className={styles.hero}>
-        <Canvas
-          style={{ width: "100vw", height: "100vh" }}
+    <Canvas
+          style={{position: 'fixed', height: '100vh', width: '100vw', zIndex: -1}}
           orthographic
           camera={{ zoom: 20 }}
         >
-          <color attach="background" args={["white"]} />
-          <Dots />
+          <color attach="background" args={["black"]} />
+          <Dots {...{pastHeroSection}}/>
         </Canvas>
-
-        <h3 className={styles.heroText}>
-          Hi, I&apos;m
-          <br />
-          <strong className={styles.strong}>
-            Andrew Boles.
-            <br />
-          </strong>
-          I&apos;m a full stack web developer. Let&apos;s get creative.
-        </h3>
+      <div className={styles.hero}>
+        
+        <div className={styles.heroTextBackground}>
+          <h3 className={styles.heroText}>
+            no alarms
+          </h3>
+        </div>
+      
         <StyledButton
-          text={"See My Work"}
+          text="listen"
           style={{ position: "absolute", zIndex: 1, bottom: "10vh" }}
           onClick={() => aboutRef.current.scrollIntoView()}
         />

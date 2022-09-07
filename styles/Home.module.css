@@ -1,11 +1,7 @@
-.threecanvas {
-  height: 100vh;
-  width: 50rem ;
-}
 
 .hero {
-  position: relative;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -13,22 +9,27 @@
 
 .heroText{
   text-align: center;
-  font-family: "Manrope", sans-serif;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  font-family: 'Rubik Maze', cursive;
   font-weight: 400;
-  position: absolute;
-  color: #363945;
-  top: 40vh;
-  font-size: 2.4rem;
-  line-height: 1.4;
+  color: #e55754;
+  font-size: clamp(4rem, 7vw, 7rem);
+  line-height: .8;
 }
-
-.strong{
-  font-weight: 400;
-  color: #a95144
+.heroTextBackground{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: absolute;
+  top: 47vh; 
 }
 
 @media (max-width: 500px) {
-  .heroText{
-    top: 30vh
+  .heroTextBackground{
+    top: 45vh
   }
+  
 }
