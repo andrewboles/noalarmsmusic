@@ -20,9 +20,9 @@ export default function Home() {
 
 useEffect(() => {
   return scrollY.onChange((latest) => {
-    if(latest < window.innerHeight*0.7 && pastHeroSection){
+    if(latest < window.innerHeight*0.65 && pastHeroSection){
       setPastHeroSection(false)
-    } else if(latest > window.innerHeight*0.7 && ! pastHeroSection){
+    } else if(latest > window.innerHeight*0.65 && ! pastHeroSection){
       setPastHeroSection(true)
     }
   })

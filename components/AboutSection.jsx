@@ -4,7 +4,7 @@ import RevealAnimatedDiv from "./RevealAnimatedDiv";
 
 const AboutSection = ({ aboutRef }) => {
   return (
-    <section id="about" ref={aboutRef} className={styles.about}>
+    <section id="music" ref={aboutRef} className={styles.about}>
       <RevealAnimatedDiv>
       <iframe
        className={styles.theBlueVid}
