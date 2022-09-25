@@ -13,7 +13,7 @@ const boxVariants = {
   },
 };
 
-const RevealAnimatedDiv = ({children,...props}) => {
+const RevealAnimatedDiv = ({children ,...props}) => {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 

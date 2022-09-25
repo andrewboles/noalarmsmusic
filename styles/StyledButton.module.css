@@ -8,9 +8,16 @@
     font-weight: 200;
     color: #fffefd;
     transition-duration: 0.4s;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
   }
   .styledButton:hover {
     transform: scale(1.1);
     background-color: #fffefd;
     color: #e55754;
+  }
+
+  .icon{
+    margin-right: 0.2em;
   }
