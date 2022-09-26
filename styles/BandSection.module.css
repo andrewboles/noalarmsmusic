@@ -1,0 +1,33 @@
+.band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2ebe6;
+    
+}
+
+.band h4{
+    text-align: center;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    margin: 0.2em;
+    font-size: clamp(1.6rem, 2.6vw, 1.9rem);
+    color: #363945;
+}
+
+.band p {
+    padding-right: 2em;
+    padding-left: 2em;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.6vw, 1.9rem);
+    text-align: center;
+    margin-top: 2em;
+    color: #363945;
+
+}
+
+.imageContainer {
+    margin-top: 2em;
+    width: 100vw;
+}

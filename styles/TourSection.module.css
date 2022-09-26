@@ -1,0 +1,28 @@
+.tour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #363945;
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+.tour h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 400;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #89908c;
+  
+  }
+
+  .tour p {
+    text-align: center;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 400;
+    margin-bottom: 3em;
+    color: #dad5d0;
+  }

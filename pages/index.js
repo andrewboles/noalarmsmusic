@@ -7,6 +7,8 @@ import { useRef } from "react";
 import ContactSection from "../components/ContactSection";
 import AboutSection from "../components/AboutSection";
 import ProjectsSection from "../components/ProjectsSection";
+import TourSection from "../components/TourSection";
+import BandSection from "../components/BandSection";
 import { useScroll  } from "framer-motion";
 import { useEffect,useState } from "react";
 
@@ -54,6 +56,8 @@ useEffect(() => {
         <Navbar />
         <AboutSection {...{ aboutRef }} />
         <ProjectsSection />
+        <BandSection />
+        <TourSection />
         <ContactSection />
       
     </>

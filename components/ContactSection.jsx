@@ -5,7 +5,7 @@ import RevealAnimatedDiv from "./RevealAnimatedDiv";
 import { AnimatePresence } from "framer-motion";
 
 const ContactSection = () => {
-  const [state, handleSubmit] = useForm("mjvzgrlq");
+  const [state, handleSubmit] = useForm("mzbwrvaa");
 
   return (
     <footer id="contact" className={styles.contact}>
@@ -16,13 +16,7 @@ const ContactSection = () => {
             className={styles.mainContainer}
           >
             <p>
-              I&apos;m always up to talk professional and collaborative
-              opportunities, music, gaming, sci-fi books, or whatever&apos;s on
-              your mind. You can check out my{" "}
-              <a href="andrewboles-fullstackdeveloper-resume.pdf" target="_new">
-                resume here
-              </a>{" "}
-              and shoot me an email here
+             join our email list to stay in the know on shows, videos, new music, and merch
               <svg
                 viewBox="0 0 20 20"
                 stroke="#cf9535"
@@ -44,11 +38,11 @@ const ContactSection = () => {
                 field="contactname"
                 errors={state.errors}
               />
-              <label htmlFor="message">message</label>
-              <textarea id="message" type="text" name="message" required></textarea>
+              <label htmlFor="email">email address</label>
+              <input id="email" type="email" name="email" required/>
               <ValidationError
-                prefix="message"
-                field="message"
+                prefix="email"
+                field="email"
                 errors={state.errors}
               />
               <StyledButton
@@ -71,18 +65,12 @@ const ContactSection = () => {
             }}
             key={"thank you message"}
           >
-            <h6>thanks for reaching out, I&apos;ll get back to you shortly!</h6>
+            <h6>thanks for jumping on the list, I&apos;ll add you!</h6>
           </RevealAnimatedDiv>
         )}
       </AnimatePresence>
-
-      <h6>
-        big thanks to <a href="https://feathericons.com/">feathericons.com, </a>
-        <a href="https://devicon.dev/">devicon.dev, </a>
-        <a href="https://icon-sets.iconify.design/">iconify, </a>
-        <a href="https://threejs.org/">threejs.org,</a> and threejs&apos;s
-        ingenious contributors
-      </h6>
+          <a className={styles.contactEmail} href="mailto:booking@noalarmsmusic.com">booking@noalarmsmusic.com</a>
+          <a className={styles.signature} href="https://andrewboles.com" target="_blank" rel="noreferrer">©2022 andrew boles</a>
     </footer>
   );
 };

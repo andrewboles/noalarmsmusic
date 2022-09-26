@@ -2,29 +2,28 @@ import styles from "../styles/ProjectsSection.module.css";
 import MusicCard from "./MusicCard";
 
 const theBlueLinks = {
-  spotify: "",
-  appleMusic: "",
-  bandcamp: "",
-  merchStore:"https://noalarms.store"
+  spotify: "https://open.spotify.com/album/3pNPIh5nF75gVIP7ybf4BT",
+  appleMusic: "https://music.apple.com/us/album/1600126168?app=music&at=1l3vpUI&ct=LFV_b1bd1a814930895232fb47cbae9f98f4&itscg=30440&itsct=catchall_p2&lId=25045076&cId=BIO&sr=2&src=Linkfire&ls=1",
+  bandcamp: "https://noalarms.bandcamp.com/",
+  merchStore:"https://noalarms.store/products/the-blue-cassette-pre-sale"
 }
 const dejaViewLinks = {
-  spotify: "",
-  appleMusic: "",
-  bandcamp: "",
+  spotify: "https://lnk.to/dejaviewws/spotify",
+  appleMusic: "https://lnk.to/dejaviewws/applemusic",
+  bandcamp: "https://lnk.to/dejaviewws/bandcamp",
   merchStore:"https://noalarms.store"
 }
 
 const selfTitledLinks = {
-  spotify: "",
-  appleMusic: "",
-  bandcamp: "",
+  spotify: "https://lnk.to/naepws/spotify",
+  appleMusic: "https://lnk.to/naepws/applemusic",
+  bandcamp: "https://lnk.to/naepws/bandcamp",
   merchStore:"https://noalarms.store"
 }
 
 const ProjectsSection = () => {
   return (
     <section id="projects" className={styles.projects}>
-      <h2>music</h2>
         <MusicCard title="The Blue" imgUrl="/theblue.jpg" links={theBlueLinks} />
         <MusicCard title="Deja View" imgUrl="/dejaview.jpg" links={dejaViewLinks} />
         <MusicCard title="No Alarms" imgUrl="/noalarms.jpg" links={selfTitledLinks} />

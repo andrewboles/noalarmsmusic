@@ -8,16 +8,6 @@
     background-color: #f2ebe6;
   }
   
-  .contact a {
-    color: #cf9535;
-    font-size: clamp(1.6rem, 2.6vw, 1.9rem);
-    font-family: "Manrope", sans-serif;
-    font-weight: 400;
-    font-weight: 500;
-  }
-  .contact a:link {
-    text-decoration: none; 
-  }
   .contact svg { 
     width: clamp(1.6rem, 2.6vw, 1.9rem);
     height: clamp(1.6rem, 2.6vw, 1.9rem); /* border: 1px solid black; */
@@ -66,17 +56,6 @@
     font-weight: 600;
   }
   
-  .contact textarea {
-    color: #363945;
-    height: 300px;
-    background: none;
-    border-radius: 10px;
-    font-family: "Manrope", sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 20px;
-    border: 2px solid #a95144;
-  }
   #submit-button {
     display: flex;
     flex-direction: column;
@@ -103,7 +82,6 @@
     color: #363945;
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-family: "Manrope", sans-serif;
-    font-weight: 400;
     font-weight: 500;
   }
   .contact h6 > a {
@@ -114,12 +92,24 @@
     font-weight: 500;
   }
   
-  .contact a{
+  .contactEmail{
     z-index: 1;
+    color: #363945;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    margin-bottom: 2em;
+
   }
 
   .mainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .signature{
+    font-size: clamp(0.9rem, 1.5vw, 0.5rem);
+    color: #363945;
+    margin-bottom: 1em;
   }
