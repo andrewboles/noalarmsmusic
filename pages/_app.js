@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>no alarms</title>
         <link rel="shortcut icon" href="/favicon.png" />
+        <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VE8yCQ" />
       </Head>
       <link
         rel="stylesheet"

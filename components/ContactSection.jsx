@@ -3,14 +3,21 @@ import StyledButton from "./StyledButton";
 import { useForm, ValidationError } from "@formspree/react";
 import RevealAnimatedDiv from "./RevealAnimatedDiv";
 import { AnimatePresence } from "framer-motion";
+import { useState, useEffect} from 'react'
 
 const ContactSection = () => {
   const [state, handleSubmit] = useForm("mzbwrvaa");
+  const [loaded, setLoaded] = useState(false)
+
+ useEffect(()=>{
+
+    setLoaded(true)
+  
+ },[])
 
   return (
     <footer id="contact" className={styles.contact}>
       <AnimatePresence>
-        {state.succeeded === false ? (
           <RevealAnimatedDiv
             key={"contactForm"}
             className={styles.mainContainer}
@@ -30,7 +37,7 @@ const ContactSection = () => {
                 <polyline points="19 12 12 19 5 12"></polyline>
               </svg>
             </p>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
               <label htmlFor="name">name</label>
               <input id="contactname" type="text" name="contactname" required />
               <ValidationError
@@ -50,24 +57,10 @@ const ContactSection = () => {
                 type="submit"
                 disabled={state.submitting}
               />
-            </form>
+            </form> */}
+           {loaded ? <div className="klaviyo-form-Rqqdqw"/> : null}
           </RevealAnimatedDiv>
-        ) : (
-          <RevealAnimatedDiv
-            style={{
-              height: "600px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              paddingLeft: "20px",
-              paddingRight: "20px",
-            }}
-            key={"thank you message"}
-          >
-            <h6>thanks for jumping on the list, I&apos;ll add you!</h6>
-          </RevealAnimatedDiv>
-        )}
+  
       </AnimatePresence>
           <a className={styles.contactEmail} href="mailto:booking@noalarmsmusic.com">booking@noalarmsmusic.com</a>
           <a className={styles.signature} href="https://andrewboles.com" target="_blank" rel="noreferrer">©2022 andrew boles</a>
