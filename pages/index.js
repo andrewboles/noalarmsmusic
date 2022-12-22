@@ -31,6 +31,11 @@ useEffect(() => {
 }, [scrollY, pastHeroSection])
   return (
     <>
+     <script
+        async
+        type="text/javascript"
+        src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VE8yCQ"
+      />
     <Canvas
           style={{position: 'fixed', height: '100vh', width: '100vw', zIndex: -1}}
           orthographic

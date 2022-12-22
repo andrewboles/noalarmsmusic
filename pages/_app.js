@@ -15,11 +15,7 @@ function MyApp({ Component, pageProps }) {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
       />
-      <script
-        async
-        type="text/javascript"
-        src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VE8yCQ"
-      />
+     
 
       <Component {...pageProps} />
     </>
