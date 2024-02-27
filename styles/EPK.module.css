@@ -138,6 +138,7 @@
   font-size: x-large;
   text-align: center;
   font-family: "Raleway", sans-serif;
+  color: #fffefd;
 }
 
 .accompHead {
@@ -147,6 +148,7 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+  color: #fffefd;
 }
 
 .accomp {
