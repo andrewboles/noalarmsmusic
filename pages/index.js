@@ -19,10 +19,9 @@ export default function Home({ contest }) {
 
   const [pastHeroSection, setPastHeroSection] = useState(false);
   useEffect(() => {
-    setTimeout(()=>{
-      setShowThanks(true)
-    },3000)
-
+    setTimeout(() => {
+      setShowThanks(true);
+    }, 3000);
   }, []);
 
   useEffect(() => {
@@ -57,7 +56,11 @@ export default function Home({ contest }) {
       <div className={styles.hero}>
         <div className={styles.heroTextBackground}>
           <h3 className={styles.heroText}>
-            {!contest ? "no alarms" : showThanks ? "thanks for entering, good luck!" :""}
+            {!contest
+              ? "no alarms"
+              : showThanks
+              ? "thanks for entering, good luck!"
+              : ""}
           </h3>
         </div>
 
