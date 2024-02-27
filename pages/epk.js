@@ -38,11 +38,11 @@ const EPK = () => {
           </div>
           <div className={styles.accomp}>
             <p className={styles.highlightText}>
-              No Alarms is an Austin-based band blending the lines between
+              {`No Alarms is an Austin-based band blending the lines between
               modern indie/alt pop and new wave revival. Currently a 2-piece
               outfit with an exploration of live-looping and powerful LED-based
               visual effects, they've built an engrossing live show from the
-              ground up.
+              ground up.`}
             </p>
             <ul
               style={{
