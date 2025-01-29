@@ -170,7 +170,7 @@ const EPK = () => {
         </div>
         <div className={styles.musicContainer}>
           <iframe
-            src="https://open.spotify.com/embed/playlist/735XvyD5m4dDhiIHzAtigp?utm_source=generator"
+            src="https://open.spotify.com/embed/playlist/2Ugf5ukRjL85N9lgwl5u53?utm_source=generator"
             width="80%"
             height="450"
             frameBorder="0"
