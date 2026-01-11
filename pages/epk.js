@@ -92,7 +92,7 @@ const EPK = () => {
               </li>
               <li>
                 <a
-                  href="https://urlgeni.us/facebook/pLEG"
+                  href="https://www.facebook.com/noalarmsmusic"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -100,7 +100,7 @@ const EPK = () => {
                 </a>
               </li>
               <li>
-                <a href="https://urlgeni.us/spotify/ENu3">
+                <a href="https://open.spotify.com/artist/1CME6xnSWrraWS3Q3M1dcX?si=d5QjFRNUR8GdQbI0pVA_RA">
                   <Icon icon="bi:spotify" fontSize={42} />
                 </a>
               </li>
